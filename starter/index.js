@@ -10,9 +10,6 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
 
-
-// TODO: Write Code to gather information about the development team members, and render the HTML file.
-
 const employees = [];
 
 const managerQuestions = [
@@ -78,21 +75,21 @@ const internQuestions = [
     },
     {
         type: 'input',
-        message: 'Type intern name: ',
+        message: 'Type intern id: ',
         default: 'John Smith',
-        name: 'name'
+        name: 'id'
     },
     {
         type: 'input',
-        message: 'Type intern name: ',
-        default: 'John Smith',
-        name: 'name'
+        message: 'Type intern email: ',
+        default: 'intern@email.com',
+        name: 'email'
     },
     {
         type: 'input',
-        message: 'Type intern name: ',
-        default: 'John Smith',
-        name: 'name'
+        message: 'Type name of your school: ',
+        default: 'University of London',
+        name: 'school'
     }
 ];
 
@@ -100,31 +97,15 @@ const menuQuestions = [
     {
         type: 'list',
         message: 'Chose one of the options: ',
-        choices: ['Add engineer.', 'Add intern.', 'I finished building my team.'],
+        choices: ['Add engineer.', 'Add intern.', 'I am done building my team.'],
         name: 'menu'
     }
 ];
 
-async function createManager(){
-
-};
-
-async function showMenu(){
-
-};
-
-async function createEngineer(){
-
-};
-
-async function createIntern(){
-
-} 
-
 async function createManager() {
     try {
-        const userResponses = await inquirer.prompt(managerQuestions);
-        const manager = new Manager(userResponses.name, userResponses.id, userResponses.email, userResponses.officeNumber);
+        const answers = await inquirer.prompt(managerQuestions);
+        const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
         employees.push(manager);
     }   catch(error) {
         console.log(error);
@@ -133,12 +114,12 @@ async function createManager() {
 }
 async function showMenu() {
     try {
-        const userResponse = await inquirer.prompt(menuQuestions);
-        switch (userResponse.menu) {
-            case "Add an engineer?":
+        const anwers = await inquirer.prompt(menuQuestions);
+        switch (answers.menu) {
+            case 'Add engineer.':
                 await createEngineer();
                 break;
-            case 'Add an intern?':
+            case 'Add intern.':
                 await createIntern();
                 break;
             default:
@@ -150,8 +131,8 @@ async function showMenu() {
 }
 async function createEngineer(){
     try {
-        const userResponses = await inquirer.prompt(engineerQuestions);
-        const engineer = new Engineer(userResponses.name, userResponses.id, userResponses.email, userResponses.github);
+        const answers = await inquirer.prompt(engineerQuestions);
+        const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
         employees.push(engineer);
     }   catch(error) {
         console.log(error);
@@ -160,8 +141,8 @@ async function createEngineer(){
 }
 async function createIntern(){
     try {
-        const userResponses = await inquirer.prompt(internQuestions);
-        const intern = new Intern(userResponses.name, userResponses.id, userResponses.email, userResponses.school);
+        const answers = await inquirer.prompt(internQuestions);
+        const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
         employees.push(intern);
     }   catch(error) {
         console.log(error);
