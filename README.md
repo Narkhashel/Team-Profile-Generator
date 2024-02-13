@@ -1,8 +1,7 @@
 # Team-Profile-Generator
 
-![GitHub](https://img.shields.io/github/license/Narkhashel/team_profile_generator)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/Narkhashel/team_profile_generator)
-![GitHub top language](https://img.shields.io/github/languages/top/Narkhashel/team_profile_generator)
+![GitHub](https://img.shields.io/github/license/Narkhashel/Team-Profile-Generator)
+![GitHub top language](https://img.shields.io/github/languages/top/Narkhashel/Team-Profile-Generator)
 
 ## Description 
 
@@ -10,7 +9,7 @@ Task was to take the given starter code and convert it into a working Node.js co
 
 ### Working Demo
 
-
+![Demo](Team-Profile-Generator\assets\Demo_recording.mp4) 
 
 ## Credits
 
@@ -26,4 +25,3 @@ This project wouldn't be possible if not for the resources:
 
 [MITLicense](https://choosealicense.com/licenses/mit/)
 
-<video controls src="Demo_recording.mp4" title="Title"></video>

@@ -114,7 +114,7 @@ async function createManager() {
 }
 async function showMenu() {
     try {
-        const anwers = await inquirer.prompt(menuQuestions);
+        const answers = await inquirer.prompt(menuQuestions);
         switch (answers.menu) {
             case 'Add engineer.':
                 await createEngineer();
