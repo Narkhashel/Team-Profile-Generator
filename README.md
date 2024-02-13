@@ -5,11 +5,13 @@
 
 ## Description 
 
-Task was to take the given starter code and convert it into a working Node.js command-line application. This application will take in information about employees on a software engineering team, then generate an HTML webpage that displays summaries for each person. I have been provided with tests, to make sure that every part of my code passes each provided test.
+The task was to take the given starter code and convert it into a working Node.js command-line application. This application will take in information about employees on a software engineering team, then generate an HTML webpage that displays summaries for each person. I have been given tests to ensure that every part of my code passes each provided test.
 
 ### Working Demo
 
-![Demo](Team-Profile-Generator\assets\Demo_recording.mp4) 
+
+https://github.com/Narkhashel/Team-Profile-Generator/assets/149010349/63c70609-8850-4c86-9d8e-b6e230778be8
+
 
 ## Credits
 
